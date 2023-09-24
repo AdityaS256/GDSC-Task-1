@@ -9,6 +9,7 @@
 .links {
   display: flex;
   gap: 33px;
+  z-index: 1000;
 }
 
 .link > * {
@@ -23,9 +24,12 @@
     padding: 100px 15%;
 }
 
-#hero > img {
+img {
     height: 100%;
     object-fit: cover;
+}
+
+#hero > img {
     filter: drop-shadow(-5px 13px 0px #EDF7FA);
 }
 
@@ -59,12 +63,11 @@ h1.hero-text {
 #recent-posts {
     background-color: #EDF7FA;
     margin: 0%;
-    padding: 2.5% 15%;
+    padding: 5% 15%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     gap: 20px;
-    flex-wrap: wrap;
 }
 
 .head {
@@ -89,7 +92,8 @@ h1.hero-text {
 
 .posts {
     display: flex;
-    gap: 5%;
+    gap: 2%;
+    flex-wrap: wrap;
 }
 
 .card {
@@ -98,9 +102,11 @@ h1.hero-text {
     border-radius: 4px;
     display: flex;
     flex-direction: column;
+    width: 43%;
+    min-width: 200px;
     gap: 20px;
-    min-width: 25%;
     filter: drop-shadow(0px 4px 10px #BBE1FA50);
+    margin-bottom: 20px;
 }
 
 .card > * {
@@ -124,7 +130,7 @@ h1.hero-text {
 
 #featured-works {
     margin: 0%;
-    padding: 2.5% 15%;
+    padding: 5% 15%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -143,6 +149,7 @@ h1.hero-text {
     flex-direction: column;
     justify-content: space-between;
     padding-right: 5%;
+    gap: 20px;
 }
 
 .data > p {
@@ -183,4 +190,75 @@ body {
   flex-direction: column;
   color: #21243d;
   font-family: "Heebo", sans-serif;
+}
+
+@media (max-width: 768px) {    
+    .card {
+        width: 100%;
+        min-width: 100%;
+        padding: 5%;
+    }
+
+    .card > h3 {
+        font-size: 22px;
+    }
+
+    .details > * {
+        font-size: 16px;
+    }
+
+    .head {
+        justify-content: center;
+    }
+
+    .head > p {
+        font-size: 18px;
+    }
+
+    .head > a {
+      display: none;
+    }
+
+    .posts {
+        justify-content: center;
+    }
+
+    .title {
+        font-size: 24px;
+    }
+
+    .year {
+        font-size: 16px;
+    }
+
+    .post {
+        flex-direction: column;
+        gap: 17.5px;
+    }
+
+    .hide-on-mobile {
+        display: none;
+    }
+
+    .post > .data {
+        gap: 20px;
+    }
+    
+    #hero {
+        flex-direction: column-reverse;
+        gap: 50px;
+    }
+
+    h1.hero-text {
+        font-size: 32px;
+    }
+
+    #hero > div {
+        align-items: center;
+        text-align: center;
+    }
+
+    #socials {
+        gap: 10%;
+    }
 }
