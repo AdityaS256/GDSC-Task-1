@@ -1,3 +1,31 @@
+[data-theme="light"] {
+    --bg-color: #FFFFFF;
+    --hero-blue: #21243d;
+    --year-blue: #21243d;
+    --link-blue: #00A8CC;
+    --rp-bg-color: #EDF7FA;
+    --card-ds: #BBE1FA50;
+    --download: #FF6464;
+    --nav-link: #000000;
+    --diag-border: #D5E2F6;
+    --divider: #e0e0e0;
+    --category: #8695A4;
+}
+
+[data-theme="dark"] {
+    --bg-color: #1B3F54;
+    --hero-blue: #D5E2F6;
+    --year-blue: #759DED;
+    --link-blue: #2DD2F6;
+    --rp-bg-color: #396680;
+    --card-ds: #BBE1FA50;
+    --download: #FF6464;
+    --nav-link: #FFFFFF;
+    --diag-border: #21243d;
+    --divider: #e0e0e0;
+    --category: #A1D3E8;
+}
+
 #nav {
   display: flex;
   justify-content: space-between;
@@ -6,29 +34,37 @@
   padding: 1% 10% 0% 15%;
 }
 
-#hamburger {
-    display: none;
+#theme > svg {
+    fill: var(--nav-link);
+}
+
+.nav-button {
     background-color: transparent;
     border: none;
     cursor: pointer;
 }
 
+#hamburger {
+    display: none;
+}
+
 dialog {
     border-radius: 10px;
-    border-color: #aaaaaa;
+    border-color: var(--diag-border);
+    background-color: var(--bg-color);
     align-items: center;
     text-align: center;
     min-width: 50%;
 }
 
 .link > button {
-    background-color: #21243d;
+    background-color: var(--hero-blue);
     border: none;
     font-size: 20px;
     font-weight: 500;
     padding: 4% 16%;
     border-radius: 4px;
-    color: #FFFFFF;
+    color: var(--bg-color);
     cursor: pointer;
 }
 
@@ -40,7 +76,7 @@ dialog {
 
 .link > * {
   text-decoration: none;
-  color: #000000;
+  color: var(--nav-link);
   font-weight: 500;
 }
 
@@ -56,7 +92,7 @@ img {
 }
 
 #hero > img {
-    filter: drop-shadow(-5px 13px 0px #EDF7FA);
+    filter: drop-shadow(-5px 13px 0px var(--rp-bg-color));
 }
 
 #hero > div {
@@ -75,19 +111,19 @@ h1.hero-text {
 }
 
 #download {
-    background-color: #FF6464;
+    background-color: var(--download);
     border: 0;
     padding: 1.5% 4%;
     border-radius: 2px;
     font-weight: 500;
     font-size: 20px;
-    color: #FFFFFF;
+    color: var(--bg-color);
     max-width: fit-content;
     font-family: 'Heebo', sans-serif;
 }
 
 #recent-posts {
-    background-color: #EDF7FA;
+    background-color: var(--rp-bg-color);
     margin: 0%;
     padding: 5% 15%;
     display: flex;
@@ -109,7 +145,7 @@ h1.hero-text {
 
 .head > a {
     text-decoration: none;
-    color: #00A8CC;
+    color: var(--link-blue);
 }
 
 .head > * {
@@ -123,7 +159,7 @@ h1.hero-text {
 }
 
 .card {
-    background-color: white;
+    background-color: var(--bg-color);
     padding: 3%;
     border-radius: 4px;
     display: flex;
@@ -131,7 +167,7 @@ h1.hero-text {
     width: 43%;
     min-width: 200px;
     gap: 20px;
-    filter: drop-shadow(0px 4px 10px #BBE1FA50);
+    filter: drop-shadow(0px 4px 10px var(--card-ds));
     margin-bottom: 20px;
 }
 
@@ -167,7 +203,7 @@ h1.hero-text {
     display: flex;
     gap: 2.5%;
     padding: 5% 0%;
-    border-bottom: #e0e0e0 solid;
+    border-bottom: var(--divider) solid;
 }
 
 .data {
@@ -189,8 +225,8 @@ h1.hero-text {
 }
 
 .year {
-    background-color: #21243d;
-    color: white;
+    background-color: var(--year-blue);
+    color: var(--bg-color);
     padding: 0.5% 2%;
     border-radius: 100em;
     font-size: 16px;
@@ -198,7 +234,7 @@ h1.hero-text {
 }
 
 .category {
-    color: #8695A4;
+    color: var(--category);
     font-size: 20px;
 }
 
@@ -209,12 +245,17 @@ h1.hero-text {
     justify-content: center;
 }
 
+#socials > a > svg {
+    fill: var(--hero-blue);
+}
+
 body {
   padding: 0%;
   margin: 0%;
   display: flex;
   flex-direction: column;
-  color: #21243d;
+  color: var(--hero-blue);
+  background-color: var(--bg-color);
   font-family: "Heebo", sans-serif;
 }
 
