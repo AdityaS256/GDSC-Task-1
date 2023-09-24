@@ -218,6 +218,12 @@ body {
   font-family: "Heebo", sans-serif;
 }
 
+footer {
+    display: none;
+    justify-content: center;
+    margin-bottom: 2%;
+}
+
 @media (max-width: 768px) {    
     
     #nav {
@@ -310,5 +316,9 @@ body {
 
     #socials {
         gap: 10%;
+    }
+
+    footer {
+        display: flex;
     }
 }
