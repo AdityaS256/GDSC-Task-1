@@ -34,8 +34,9 @@
   padding: 1% 10% 0% 15%;
 }
 
-#theme > svg {
+.nav-button > svg {
     fill: var(--nav-link);
+    stroke: var(--nav-link);
 }
 
 .nav-button {
