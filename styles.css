@@ -26,6 +26,7 @@
 #hero > img {
     height: 100%;
     object-fit: cover;
+    filter: drop-shadow(-5px 13px 0px #EDF7FA);
 }
 
 #hero > div {
@@ -99,6 +100,7 @@ h1.hero-text {
     flex-direction: column;
     gap: 20px;
     min-width: 25%;
+    filter: drop-shadow(0px 4px 10px #BBE1FA50);
 }
 
 .card > * {
@@ -165,6 +167,13 @@ h1.hero-text {
 .category {
     color: #8695A4;
     font-size: 20px;
+}
+
+#socials {
+    padding: 10%;
+    display: flex;
+    gap: 5%;
+    justify-content: center;
 }
 
 body {
