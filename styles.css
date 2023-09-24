@@ -20,7 +20,7 @@
 #hero {
     display: flex;
     gap: 20%;
-    padding: 0% 15%;
+    padding: 100px 15%;
 }
 
 #hero > img {
@@ -70,6 +70,7 @@ h1.hero-text {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding-bottom: 0%;
 }
 
 .head > p {
@@ -112,10 +113,58 @@ h1.hero-text {
     display: flex;
     gap: 20px;
     font-size: 18px;
+    align-items: center;
 }
 
 .details > * {
     margin: 0%;
+}
+
+#featured-works {
+    margin: 0%;
+    padding: 2.5% 15%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+}
+
+.post {
+    display: flex;
+    gap: 2.5%;
+    padding: 5% 0%;
+    border-bottom: #e0e0e0 solid;
+}
+
+.data {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-right: 5%;
+}
+
+.data > p {
+    margin: 0%;
+}
+
+.title {
+    font-size: 30px;
+    margin: 0%;
+    font-weight: 700;
+}
+
+.year {
+    background-color: #21243d;
+    color: white;
+    padding: 0.5% 2%;
+    border-radius: 100em;
+    font-size: 16px;
+    font-weight: 900;
+}
+
+.category {
+    color: #8695A4;
+    font-size: 20px;
 }
 
 body {
@@ -124,6 +173,5 @@ body {
   display: flex;
   flex-direction: column;
   color: #21243d;
-  gap: 100px;
   font-family: "Heebo", sans-serif;
 }
